@@ -4,15 +4,8 @@
 
 ### Batch Script File Assignment (worth 10% of final mark)
 
-
 ### Tasks for this assignment are as follows
-
-First Header | Second Header
------------- | -------------
-Content cell 1 | Content cell 2
-Content column 1 | Content column 2
-
-### Due: Thursday April 9th 5.00pm
+#### Due: Thursday April 9th 5.00pm
 
 #### Task
 **Create a batch script file with a text editor of your choice – Notepad/Notepad++/Editplus.**
@@ -23,10 +16,10 @@ At the beginning of the file, insert a text header made up of non-executable com
 (there is a command to do this – look in the HELP list), labelling and describing the following
 information on multiple lines:
 
-- [ ] 1. The name of the batch script file
-- [ ] 2. A paragraph describing the purpose of the script
-- [ ] 3. Your name and student ID
-- [ ] 4. The course name, your year and semester, and your study stream
+1. The name of the batch script file
+2. A paragraph describing the purpose of the script
+3. Your name and student ID
+4. The course name, your year and semester, and your study stream
 
 After the header comment, insert a command that outputs the file name to the screen.
 
@@ -61,19 +54,19 @@ Upload to Batchscript Assignment section in class Teams site.
 ## Instructions
 #### Batch Script File: **MAIN.BAT**
 
-- [x] **A1:** Output a line to the screen that displays your name
+- [ ] **A1:** Output a line to the screen that displays your name
 
-- [x] **A2:** Create a folder on the root of the C: drive called “My Batch Script File Assignment”
+- [ ] **A2:** Create a folder on the root of the C: drive called “My Batch Script File Assignment”
 
-- [x] **A3:** Change into the “My Batch Script File Assignment” folder.
+- [ ] **A3:** Change into the “My Batch Script File Assignment” folder.
 
-- [x] **A4:** Create a folder within “My Batch Script File Assignment” called “Input”
+- [ ] **A4:** Create a folder within “My Batch Script File Assignment” called “Input”
 
-- [x] **A5:** Create another folder within “My Batch Script File Assignment” called “Processing”
+- [ ] **A5:** Create another folder within “My Batch Script File Assignment” called “Processing”
 
-- [x] **A6:** Create another folder within “My Batch Script File Assignment” called “Output”
+- [ ] **A6:** Create another folder within “My Batch Script File Assignment” called “Output”
 
-- [x] **A7:** List all hidden files in the root directory of the C: drive – output the listing to a file called “Input Data.txt” in the “Input” subfolder.
+- [ ] **A7:** List all hidden files in the root directory of the C: drive – output the listing to a file called “Input Data.txt” in the “Input” subfolder.
 (In this assignment, you won’t be using the contents of this file as actual input, but it is possible to do so.)
 
 - [ ] **A8:** Make a backup copy of Input Data.txt on the root of the C: drive, and with the same name, but with extension “.bak”.
