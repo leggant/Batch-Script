@@ -1,0 +1,76 @@
+@ECHO off
+:: turns off command output lines
+
+REM Script File Name = script.bat
+REM Purpose of the Batch Script File Is:
+:: By Anthony Legg, 03007276 - Stream A
+:: Bachelor of Information Technology, Year 1
+
+:: ECHO. outputs blank line
+ECHO.
+ECHO A1 - Output name to cmd using the ECHO command.
+ECHO Anthony Legg
+ECHO.
+PAUSE
+CLS
+
+
+ECHO.
+ECHO A2 - Create a folder in the root of C:\ drive named: 'My Batch Script File Assignment'.
+CD C:\
+MD "My Batch Script File Assignment"
+ECHO.
+PAUSE
+CLS
+
+
+ECHO.
+ECHO A3 - Change current working directory into the newly created folder named: 'My Batch Script File Assignment'.
+CD C:\My Batch Script File Assignment
+ECHO.
+PAUSE
+CLS
+
+
+ECHO.
+ECHO A4 - Create a new directory inside C:\My Batch Script File Assignment called: 'Input'.
+MD Input
+ECHO.
+PAUSE
+CLS
+
+
+ECHO.
+ECHO A5 - Create another new directory inside C:\My Batch Script File Assignment called: 'Processing'.
+MD Processing
+ECHO.
+PAUSE
+CLS
+
+
+ECHO.
+ECHO A6 - Create another new directory inside C:\My Batch Script File Assignment called: 'Output'.
+MD Output
+ECHO.
+PAUSE
+CLS
+
+ECHO.
+ECHO A7 - List all the hidden files in the root directory. 
+ECHO      Output the listing to a new text file named 'Input Data.txt' 
+ECHO      Output this file in the 'Input' directory. 
+DIR C:/a:h
+DIR C:\ /a:h > Input\"Input Text.txt" 
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A8 - Create Back-Up copy of the new Input Data.txt file in the root directory. 
+ECHO      The new file must have the .bak extension: Input Data.bak
+CD C:\My Batch Script File Assignment\Input\
+COPY "Input Text.txt" "Input Data.bak"
+MOVE "Input Data.bak" C:\
+ECHO.
+PAUSE
+CLS 
