@@ -59,8 +59,9 @@ ECHO.
 ECHO A7 - List all the hidden files in the root directory. 
 ECHO      Output the listing to a new text file named 'Input Data.txt' 
 ECHO      Output this file in the 'Input' directory. 
-DIR C:/a:h
-DIR C:\ /a:h > Input\"Input Text.txt" 
+ECHO.
+DIR C:\ /a:h
+DIR C:\ /a:h > Input\"Input Data.txt" 
 ECHO.
 PAUSE
 CLS 
@@ -68,9 +69,8 @@ CLS
 ECHO.
 ECHO A8 - Create Back-Up copy of the new Input Data.txt file in the root directory. 
 ECHO      The new file must have the .bak extension: Input Data.bak
-CD C:\My Batch Script File Assignment\Input\
-COPY "Input Text.txt" "Input Data.bak"
-MOVE "Input Data.bak" C:\
+:: Unable to get file permissions to write to the root directory??
+COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\My Batch Script File Assignment\Input Data.bak"
 ECHO.
 PAUSE
 CLS 
