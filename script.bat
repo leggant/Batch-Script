@@ -69,8 +69,27 @@ CLS
 ECHO.
 ECHO A8 - Create Back-Up copy of the new Input Data.txt file in the root directory. 
 ECHO      The new file must have the .bak extension: Input Data.bak
-:: Unable to get file permissions to write to the root directory??
 COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\My Batch Script File Assignment\Input Data.bak"
+:: Unable to get file permissions to write to the root directory??
+COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" \
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A9 - Go to the root of the C:\ directory.
+ECHO.
+CD C:\
+ECHO.
+PAUSE
+CLS 
+:: Check this achieves the task. I think I am only supposed to display the path to Processing not actually change it from A9.
+ECHO.
+ECHO A10 - Update the folder search path for batch script file execution to include the  'Processing' subfolder
+ECHO       then display the folder search path.
+ECHO.
+CD C:\My Batch Script File Assignment\Processing
+DIR 
 ECHO.
 PAUSE
 CLS 
