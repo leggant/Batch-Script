@@ -69,8 +69,37 @@ CLS
 ECHO.
 ECHO A8 - Create Back-Up copy of the new Input Data.txt file in the root directory. 
 ECHO      The new file must have the .bak extension: Input Data.bak
-:: Unable to get file permissions to write to the root directory??
-COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\My Batch Script File Assignment\Input Data.bak"
+COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\Input Data.bak"
+ECHO.
+PAUSE
+CLS 
+:: Test this with admin permissions
+
+ECHO.
+ECHO A9 - Go to the root of the C:\ directory.
+ECHO      Command must work the same from any current drive, folder or sub-folder
+ECHO.
+CD /D C:\
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A10 - Update the folder search path for batch script file execution to include the  'Processing' subfolder
+ECHO       then display the folder search path.
+ECHO.
+:: Append Processing to the path.
+CD C:\My Batch Script File Assignment\Processing
+DIR 
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A11 - Change the command prompt to include the time, text 'Hello World' and the '>' character.
+ECHO       (to demonstrate this on the screen you might need to temporarily alter the setting so that the lines.)
+ECHO.
+PROMPT $t$s$s$sHello World$s$s$G
 ECHO.
 PAUSE
 CLS 
