@@ -73,7 +73,7 @@ COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\Input Data.ba
 ECHO.
 PAUSE
 CLS 
-:: Test this with admin permissions
+:: Remember to Test this with admin permissions tomorrow or over the weekend
 
 ECHO.
 ECHO A9 - Go to the root of the C:\ directory.
@@ -100,6 +100,14 @@ ECHO A11 - Change the command prompt to include the time, text 'Hello World' and
 ECHO       (to demonstrate this on the screen you might need to temporarily alter the setting so that the lines.)
 ECHO.
 PROMPT $t$s$s$sHello World$s$s$G
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A12 - Change the command prompt to include the time, text 'Hello World' and the '>'
+ECHO.
+
 ECHO.
 PAUSE
 CLS 
