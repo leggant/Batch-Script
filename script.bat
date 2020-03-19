@@ -105,9 +105,66 @@ PAUSE
 CLS 
 
 ECHO.
-ECHO A12 - Change the command prompt to include the time, text 'Hello World' and the '>'
+ECHO A12 - Create a new command window, with red coloured text and a green background
+ECHO       (to do this, you will need two commands on the same line; one is CMD - type 'CMD/?' for help;
+ECHO       The other command is in the help list.
 ECHO.
+ECHO.
+PAUSE
+CLS 
 
+ECHO.
+ECHO A13 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A14 - Create a new command window, w
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A15 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A16 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A17 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A18 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A19 - Create a new command window, 
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A20 - Create a new command window, 
+ECHO.
 ECHO.
 PAUSE
 CLS 
