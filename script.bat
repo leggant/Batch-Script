@@ -88,13 +88,12 @@ ECHO.
 ECHO A10 - Update the folder search path for batch script file execution to include the  'Processing' subfolder
 ECHO       then display the folder search path.
 ECHO.
-:: Append Processing to the path.
-CD C:\My Batch Script File Assignment\Processing
-DIR 
+SET MYPATH=C:\My Batch Script File Assignment\Processing
+SET "PATH=%MYPATH%;%PATH%"
 ECHO.
 PAUSE
 CLS 
-
+:: Double check this in a VM
 ECHO.
 ECHO A11 - Change the command prompt to include the time, text 'Hello World' and the '>' character.
 ECHO       (to demonstrate this on the screen you might need to temporarily alter the setting so that the lines.)
