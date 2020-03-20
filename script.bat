@@ -108,62 +108,65 @@ ECHO A12 - Create a new command window, with red coloured text and a green backg
 ECHO       (to do this, you will need two commands on the same line; one is CMD - type 'CMD/?' for help;
 ECHO       The other command is in the help list.
 ECHO.
-CMD START && COLOR 24
+CMD COLOR 24 && CMD
 ECHO.
 PAUSE
 CLS 
-
+:: This isnt right, to create a new window enter start command - 
 ECHO.
-ECHO A13 - Create a new command window, 
-ECHO.
-ECHO.
-PAUSE
-CLS 
-
-ECHO.
-ECHO A14 - Create a new command window, w
+ECHO A13 - Create another new command window, with blue coloured text and a bright white background, and with a prompt that includes the Windows version number.
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A15 - Create a new command window, 
+ECHO A14 - List all the folders (not files) in C:\WINDOWS\System32, (or 64-bit equivalent) sorted into alphabetical order
+ECHO     – output the listing to a file called “Batch Script File Output Data.txt” in the “Output” subfolder. 
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A16 - Create a new command window, 
+ECHO A15 - List all text files whose names are up to seven characters long on the whole C: drive – make the listing output in wide format – 
+ECHO       the listing output must be appended to the end of “Batch Script File Output Data.txt”
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A17 - Create a new command window, 
+ECHO A16 - Delete folder “My Batch Script File Assignment”, together with all subfolders and their contents. 
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A18 - Create a new command window, 
+ECHO A17 - Output to the screen the configuration information relating to your network settings.
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A19 - Create a new command window, 
+ECHO A18 - Create a local user called “Bob”, then create a local group called “Awesome Users” and add Bob to it.
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A20 - Create a new command window, 
+ECHO A19 - Delete the group “Awesome Users” and delete the user “Bob”.
+ECHO.
+ECHO.
+PAUSE
+CLS 
+
+ECHO.
+ECHO A20 - Create a task to be scheduled at 10pm every Sunday that will check the C disk for errors and write the 
+ECHO       results to a file called “chkdskResults.txt” on the desktop.
 ECHO.
 ECHO.
 PAUSE
