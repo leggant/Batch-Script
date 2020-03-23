@@ -1,12 +1,12 @@
 @ECHO off
 :: turns off command output lines
-
 REM Script File Name = script.bat
 REM Purpose of the Batch Script File Is:
 :: By Anthony Legg, 03007276 - Stream A
 :: Bachelor of Information Technology, Year 1
-
 :: ECHO. outputs blank line
+
+
 ECHO.
 ECHO A1 - Output name to cmd using the ECHO command.
 ECHO Anthony Legg
@@ -55,16 +55,18 @@ ECHO.
 PAUSE
 CLS
 
+
 ECHO.
 ECHO A7 - List all the hidden files in the root directory. 
 ECHO      Output the listing to a new text file named 'Input Data.txt' 
 ECHO      Output this file in the 'Input' directory. 
 ECHO.
-DIR C:\ /a:h
-DIR C:\ /a:h > Input\"Input Data.txt" 
+DIR C:\ /A:H
+DIR C:\ /A:H > "C:\My Batch Script File Assignment\Input\Input Data.txt" 
 ECHO.
 PAUSE
 CLS 
+
 
 ECHO.
 ECHO A8 - Create Back-Up copy of the new Input Data.txt file in the root directory. 
@@ -73,7 +75,7 @@ COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\Input Data.ba
 ECHO.
 PAUSE
 CLS 
-:: Remember to Test this with admin permissions tomorrow or over the weekend
+
 
 ECHO.
 ECHO A9 - Go to the root of the C:\ directory.
@@ -84,16 +86,18 @@ ECHO.
 PAUSE
 CLS 
 
+
 ECHO.
 ECHO A10 - Update the folder search path for batch script file execution to include the  'Processing' subfolder
 ECHO       then display the folder search path.
 ECHO.
-SET MYPATH=C:\My Batch Script File Assignment\Processing
-SET "PATH=%MYPATH%;%PATH%"
+::SET MYPATH=C:\My Batch Script File Assignment\Processing
+::SET "PATH=%MYPATH%;%PATH%"
 ECHO.
 PAUSE
 CLS 
-:: Double check this in a VM
+
+
 ECHO.
 ECHO A11 - Change the command prompt to include the time, text 'Hello World' and the '>' character.
 ECHO       (to demonstrate this on the screen you might need to temporarily alter the setting so that the lines.)
@@ -102,6 +106,7 @@ PROMPT $t$s$s$sHello World$s$s$G
 ECHO.
 PAUSE
 CLS 
+
 
 ECHO.
 ECHO A12 - Create a new command window, with red coloured text and a green background
@@ -113,33 +118,43 @@ ECHO.
 PAUSE
 CLS 
 
+
 ECHO.
-ECHO A13 - Create another new command window, with blue coloured text and a bright white background, and with a prompt that includes the Windows version number.
+ECHO A13 - Create another new command window, with blue coloured text and a bright white background, 
+ECHO       and with a prompt that includes the Windows version number.
 ECHO.
 START CMD /K COLOR F1
+PROMPT $v$s$G
+ECHO.
+PAUSE
+CLS 
+
+
+ECHO.
+ECHO A14 - List all the folders \(not files\) in C:\WINDOWS\System32, (or 64-bit equivalent) sorted into alphabetical order
+ECHO     – output the listing to a file called \'Batch Script File Output Data.txt' in the 'Output' subfolder. 
+ECHO.
+DIR C:\Windows\System32 /A:D/O:N > "C:\My Batch Script File Assignment\Output\Batch Script File Output Data.txt"
+ECHO.
+PAUSE
+CLS 
+
+
+ECHO.
+ECHO A15 - List all text files whose names are up to seven characters long on the whole C: drive 
+ECHO       – make the listing output in wide format – the listing output must be appended to the end of
+ECHO       'Batch Script File Output Data.txt'
+ECHO.
+::DIR C:\ .txt /W /A:-d-h
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A14 - List all the folders (not files) in C:\WINDOWS\System32, (or 64-bit equivalent) sorted into alphabetical order
-ECHO     – output the listing to a file called “Batch Script File Output Data.txt” in the “Output” subfolder. 
+ECHO A16 - Delete folder 'My Batch Script File Assignment', together with all subfolders and their contents. 
 ECHO.
-ECHO.
-PAUSE
-CLS 
-
-ECHO.
-ECHO A15 - List all text files whose names are up to seven characters long on the whole C: drive – make the listing output in wide format – 
-ECHO       the listing output must be appended to the end of “Batch Script File Output Data.txt”
-ECHO.
-ECHO.
-PAUSE
-CLS 
-
-ECHO.
-ECHO A16 - Delete folder “My Batch Script File Assignment”, together with all subfolders and their contents. 
-ECHO.
+CD C:\
+DEL "C:\My Batch Script File Assignment"
 ECHO.
 PAUSE
 CLS 
@@ -152,14 +167,14 @@ PAUSE
 CLS 
 
 ECHO.
-ECHO A18 - Create a local user called “Bob”, then create a local group called “Awesome Users” and add Bob to it.
+ECHO A18 - Create a local user called 'Bob', then create a local group called 'Awesome Users' and add Bob to it.
 ECHO.
 ECHO.
 PAUSE
 CLS 
 
 ECHO.
-ECHO A19 - Delete the group “Awesome Users” and delete the user “Bob”.
+ECHO A19 - Delete the group 'Awesome Users' and delete the user 'Bob'.
 ECHO.
 ECHO.
 PAUSE
@@ -167,7 +182,7 @@ CLS
 
 ECHO.
 ECHO A20 - Create a task to be scheduled at 10pm every Sunday that will check the C disk for errors and write the 
-ECHO       results to a file called “chkdskResults.txt” on the desktop.
+ECHO       results to a file called 'chkdskResults.txt' on the desktop.
 ECHO.
 ECHO.
 PAUSE
