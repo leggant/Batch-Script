@@ -108,7 +108,7 @@ ECHO A12 - Create a new command window, with red coloured text and a green backg
 ECHO       (to do this, you will need two commands on the same line; one is CMD - type 'CMD/?' for help;
 ECHO       The other command is in the help list.
 ECHO.
-CMD/T:24
+START CMD /K COLOR 24
 ECHO.
 PAUSE
 CLS 
