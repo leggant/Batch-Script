@@ -112,10 +112,11 @@ START CMD /K COLOR 24
 ECHO.
 PAUSE
 CLS 
-:: This isnt right, to create a new window enter start command - 
+
 ECHO.
 ECHO A13 - Create another new command window, with blue coloured text and a bright white background, and with a prompt that includes the Windows version number.
 ECHO.
+START CMD /K COLOR F1
 ECHO.
 PAUSE
 CLS 
