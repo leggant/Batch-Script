@@ -150,6 +150,7 @@ ECHO.
 PAUSE
 CLS 
 
+
 ECHO.
 ECHO A16 - Delete folder 'My Batch Script File Assignment', together with all subfolders and their contents. 
 ECHO.
@@ -159,31 +160,39 @@ ECHO.
 PAUSE
 CLS 
 
+
 ECHO.
 ECHO A17 - Output to the screen the configuration information relating to your network settings.
 ECHO.
+
 ECHO.
 PAUSE
 CLS 
+
 
 ECHO.
 ECHO A18 - Create a local user called 'Bob', then create a local group called 'Awesome Users' and add Bob to it.
 ECHO.
+
 ECHO.
 PAUSE
 CLS 
 
+
 ECHO.
 ECHO A19 - Delete the group 'Awesome Users' and delete the user 'Bob'.
 ECHO.
+
 ECHO.
 PAUSE
 CLS 
+
 
 ECHO.
 ECHO A20 - Create a task to be scheduled at 10pm every Sunday that will check the C disk for errors and write the 
 ECHO       results to a file called 'chkdskResults.txt' on the desktop.
 ECHO.
+
 ECHO.
 PAUSE
 CLS 
