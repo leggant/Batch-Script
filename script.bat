@@ -145,7 +145,8 @@ ECHO A15 - List all text files whose names are up to seven characters long on th
 ECHO       – make the listing output in wide format – the listing output must be appended to the end of
 ECHO       'Batch Script File Output Data.txt'
 ECHO.
-::DIR C:\ .txt /W /A:-d-h
+DIR C:\ wild card here>???????.txt /W /A:-d-h  
+::look for a wildcard
 ECHO.
 PAUSE
 CLS 
