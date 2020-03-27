@@ -91,8 +91,8 @@ ECHO.
 ECHO A10 - Update the folder search path for batch script file execution to include the  'Processing' subfolder
 ECHO       then display the folder search path.
 ECHO.
-::SET MYPATH=C:\My Batch Script File Assignment\Processing
-::SET "PATH=%MYPATH%;%PATH%"
+SET MYPATH=C:\My Batch Script File Assignment\Processing
+SET "PATH=%MYPATH%;%PATH%"
 ECHO.
 PAUSE
 CLS 
@@ -145,8 +145,7 @@ ECHO A15 - List all text files whose names are up to seven characters long on th
 ECHO       – make the listing output in wide format – the listing output must be appended to the end of
 ECHO       'Batch Script File Output Data.txt'
 ECHO.
-DIR C:\ wild card here>???????.txt /W /A:-d-h  
-::look for a wildcard
+DIR C:\ ???????.txt /W /A:-d-h
 ECHO.
 PAUSE
 CLS 
