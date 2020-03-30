@@ -155,7 +155,8 @@ ECHO.
 ECHO A16 ^- Delete folder ^'My Batch Script File Assignment^'^, together with all subfolders and their contents^. 
 ECHO.
 CD C:\
-::RD
+::RD /s /Q C:\"My Batch Script File Assignment"
+:: Test this code!
 CMD
 ECHO.
 PAUSE
@@ -165,7 +166,7 @@ CLS
 ECHO.
 ECHO A17 ^- Output to the screen the configuration information relating to your network settings^.
 ECHO.
-
+NET CONFIG
 ECHO.
 PAUSE
 CLS 
@@ -174,7 +175,9 @@ CLS
 ECHO.
 ECHO A18 ^- Create a local user called ^'Bob^'^, then create a local group called ^'Awesome Users^' and add Bob to it^.
 ECHO.
-
+net user Bob /add
+net localgroup "Awesome Users" /add
+net localgroup "Awesome Users" Bob /add
 ECHO.
 PAUSE
 CLS 
@@ -183,7 +186,9 @@ CLS
 ECHO.
 ECHO A19 ^- Delete the group ^'Awesome Users^' and delete the user ^'Bob^'^.
 ECHO.
-
+net localgroup "Awesome Users" Bob /delete
+net localgroup "Awesome Users" /delete
+net user Bob /delete
 ECHO.
 PAUSE
 CLS 
