@@ -208,10 +208,7 @@ ECHO.
 ECHO A20 ^- Create a task to be scheduled at 10pm every Sunday that will check the C disk 
 ECHO for errors and write the results to a file called ^'chkdskResults^.txt^' on the desktop^.
 ECHO.
-:: How to create the file to run, C:\My Batch Script File Assignment\C drive error checker.bat from with in the .bat file>???
 SCHTASKS /create /tn "C: Error Checking" /tr "C:\My Batch Script File Assignment\C drive error checker.bat" /sc WEEKLY /mo 1 /d SUN /st 22:00 /ru System
-:: How to out put the results for the chkdsk C:\ to the txt file on the desktop
-:: How to make sure I can actually access the desktop to write the text file?  What is the path?
 SCHTASKS /query /fo LIST /v >> C:\Administrators\Desktop\chkdskResults.txt"
 chkdsk C:\
 ECHO.
