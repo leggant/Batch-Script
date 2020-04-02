@@ -1,10 +1,9 @@
 @ECHO off
-:: turns off command output lines
 REM Script File Name = script.bat
-REM Purpose of the Batch Script File Is:
+REM Purpose of the Batch Script File Is: To create
+:: new folders in the root directory of the C:\,
 :: By Anthony Legg, 03007276 - Stream A
 :: Bachelor of Information Technology, Year 1
-:: ECHO. outputs blank line
 
 
 ECHO.
@@ -16,7 +15,9 @@ CLS
 
 
 ECHO.
-ECHO A2 ^- Create a folder in the root of C^:^\ drive named^: ^'My Batch Script File Assignment^'^.
+ECHO A2 ^- Using CD to change the current working directory to the root of 
+ECHO the C^:^\ drive^, create a folder named^: ^'My Batch Script File Assignment^'^ 
+ECHO using the MD command^.
 CD C:\
 MD "My Batch Script File Assignment"
 ECHO.
@@ -25,7 +26,8 @@ CLS
 
 
 ECHO.
-ECHO A3 ^- Change current working directory into the newly created folder named^: ^'My Batch Script File Assignment^'^.
+ECHO A3 ^- Using the CD command^, change current working directory into the 
+ECHO newly created folder named^: ^'My Batch Script File Assignment^'^.
 CD C:\My Batch Script File Assignment
 ECHO.
 PAUSE
@@ -33,7 +35,8 @@ CLS
 
 
 ECHO.
-ECHO A4 ^- Create a new directory inside C^:^\My Batch Script File Assignment called^: ^'Input^'^.
+ECHO A4 ^- Inside the C^:^\My Batch Script File Assignment directory^, 
+ECHO create a new directory called^: ^'Input^' using the MD command^.
 MD Input
 ECHO.
 PAUSE
@@ -41,7 +44,8 @@ CLS
 
 
 ECHO.
-ECHO A5 ^- Create another new directory inside C^:^\My Batch Script File Assignment called^: ^'Processing^'^.
+ECHO A5 ^- Then^, create a second new directory inside C^:^\My Batch Script File Assignment called^: ^'Processing^' 
+ECHO also using the MD command^.
 MD Processing
 ECHO.
 PAUSE
@@ -49,7 +53,8 @@ CLS
 
 
 ECHO.
-ECHO A6 ^- Create another new directory inside C^:^\My Batch Script File Assignment called^: ^'Output'^.
+ECHO A6 ^- And create a third new directory inside 
+ECHO C^:^\My Batch Script File Assignment called^: ^'Output^' using the MD command^.
 MD Output
 ECHO.
 PAUSE
@@ -57,9 +62,9 @@ CLS
 
 
 ECHO.
-ECHO A7 ^- List all the hidden files in the root directory^. 
-ECHO      Output the listing to a new text file named 'Input Data^.txt' 
-ECHO      Output this file in the ^'Input^' directory^. 
+ECHO A7 ^- List all the hidden files in the root directory using the DIR command with the flags ^/A^:H^. 
+ECHO Output the listing to a new text file named ^'Input Data^.txt^' using the ^"^>^" character 
+ECHO Output this file in the ^'Input^' directory^. 
 ECHO.
 DIR C:\ /A:H
 DIR C:\ /A:H > "C:\My Batch Script File Assignment\Input\Input Data.txt" 
@@ -69,8 +74,8 @@ CLS
 
 
 ECHO.
-ECHO A8 ^- Create Back^-Up copy of the new Input Data^.txt file in the root directory^. 
-ECHO      The new file must have the ^.bak extension^: Input Data^.bak
+ECHO A8 ^- Using the COPY command, create Back^-Up copy of the new Input Data^.txt file in the root directory^. 
+ECHO The new file must have the ^.bak extension^: Input Data^.bak
 COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\Input Data.bak"
 ECHO.
 PAUSE
@@ -78,8 +83,8 @@ CLS
 
 
 ECHO.
-ECHO A9 ^- Go to the root of the C^:^\ directory^.
-ECHO      Command must work the same from any current drive^, folder or sub^-folder
+ECHO A9 ^- Using the CD command with the ^/D flag, Go to the root of the 
+ECHO C^:^\ directory^ from any current drive^, folder or sub^-folder^.
 ECHO.
 CD /D C:\
 ECHO.
@@ -89,7 +94,8 @@ CLS
 
 ECHO.
 ECHO A10 ^- Update the folder search path for batch script file execution to include the ^'Processing^' subfolder
-ECHO       then display the folder search path^.
+ECHO then display the folder search path^. Using the SET command to create the variable MYPATH then appending 
+ECHO the variable to the PATH using SET command^.
 ECHO.
 ::SET MYPATH=C:\My Batch Script File Assignment\Processing
 ::SET "PATH=%MYPATH%;%PATH%"
@@ -99,8 +105,9 @@ CLS
 
 
 ECHO.
-ECHO A11 ^- Change the command prompt to include the time^, text ^'Hello World^' and the ^> character^.
-ECHO       ^(to demonstrate this on the screen you might need to temporarily alter the setting so that the lines^.^)
+ECHO A11 ^- Using the PROMPT command with the ^$t^, ^$s and ^$G wildcards^, 
+ECHO change the command prompt to include the time^, text ^'Hello World^' 
+ECHO and the ^> character^.
 ECHO.
 PROMPT $t$s$s$sHello World$s$s$G
 ECHO.
@@ -109,9 +116,8 @@ CLS
 
 
 ECHO.
-ECHO A12 ^- Create a new command window^, with red coloured text and a green background
-ECHO       ^(to do this^, you will need two commands on the same line^; one is CMD ^- type ^'CMD/^?^' for help^;
-ECHO       The other command is in the help list^.
+ECHO A12 ^- Create a new command window^, with red coloured text and a green background^.
+ECHO Using the START command combined with the commands CMD ^/K and COLOR ^24^.
 ECHO.
 START CMD /K COLOR 24
 ECHO.
@@ -120,8 +126,9 @@ CLS
 
 
 ECHO.
-ECHO A13 ^- Create another new command window^, with blue coloured text and a bright white background^, 
-ECHO       and with a prompt that includes the Windows version number^.
+ECHO A13 ^- Create a second new command window^, with blue coloured text and a bright white background^, 
+ECHO and with a prompt that includes the Windows version number^. Using the START CMD ^/K command
+ECHO combined with a string of commands^: COLOR ^&^& ^PROMPT 
 ECHO.
 START CMD /K "COLOR F1 && PROMPT $v$s$G"
 ECHO.
@@ -130,8 +137,9 @@ CLS
 
 
 ECHO.
-ECHO A14 ^- List all the folders ^(not files^) in C^:^\WINDOWS^\System32^, ^(or 64^-bit equivalent^) sorted into alphabetical order ^- 
-ECHO       output the listing to a file called ^'Batch Script File Output Data^.txt^' in the ^'Output^' subfolder^. 
+ECHO A14 ^- Using the DIR command followed by the file path^, list all the folders ^(not files^) in C^:^\WINDOWS^\System32^, 
+ECHO ^(or 64^-bit equivalent^) sorted into alphabetical order ^ using flags. Then^, using the same command output the results to a file called
+ECHO  ^'Batch Script File Output Data^.txt^' in the ^'Output^' subfolder^ using the ^"^>^" and the path and filename to output to. 
 ECHO.
 DIR C:\Windows\System32 /A:D/O:N
 DIR C:\Windows\System32 /A:D/O:N > "C:\My Batch Script File Assignment\Output\Batch Script File Output Data.txt"
@@ -141,9 +149,9 @@ CLS
 
 
 ECHO.
-ECHO A15 ^- List all text files whose names are up to seven characters long on the whole C^: drive 
-ECHO       ^– make the listing output in wide format ^– the listing output must be appended to the end of
-ECHO       ^'Batch Script File Output Data^.txt^'
+ECHO A15 ^- Using the DIR command, list all text files whose names are up to seven characters 
+ECHO long on the whole C^: drive make the listing output in wide format 
+ECHO the listing output must be appended to the end of^'Batch Script File Output Data^.txt^' using the ^/s and ^/w flags^.
 ECHO.
 DIR /s /w ???????.txt
 ECHO.
@@ -152,53 +160,60 @@ CLS
 
 
 ECHO.
-ECHO A16 ^- Delete folder ^'My Batch Script File Assignment^'^, together with all subfolders and their contents^. 
+ECHO A16 ^- Using the RD command^, delete the folder ^'My Batch Script File Assignment^'^, 
+ECHO together with all subfolders and their contents^. include the flags ^/s ^/Q followed by the path to the folder^.
 ECHO.
 CD C:\
-::RD /s /Q C:\"My Batch Script File Assignment"
-:: Test this code!
-CMD
+RD /s /Q C:\"My Batch Script File Assignment"
 ECHO.
 PAUSE
 CLS 
 
 
 ECHO.
-ECHO A17 ^- Output to the screen the configuration information relating to your network settings^.
+ECHO A17 ^- Using the IPCONFIG ^/ALL command, output to the screen the configuration 
+ECHO information relating to your network settings^.
 ECHO.
-NET CONFIG
-ECHO.
-PAUSE
-CLS 
-
-
-ECHO.
-ECHO A18 ^- Create a local user called ^'Bob^'^, then create a local group called ^'Awesome Users^' and add Bob to it^.
-ECHO.
-net user Bob /add
-net localgroup "Awesome Users" /add
-net localgroup "Awesome Users" Bob /add
+IPCONFIG /ALL
 ECHO.
 PAUSE
 CLS 
 
 
 ECHO.
-ECHO A19 ^- Delete the group ^'Awesome Users^' and delete the user ^'Bob^'^.
+ECHO A18 ^- Using the NET USER command with the flag ^/ADD ^, create a local user called
+ECHO  ^'Bob^'^, then using the NET LOCALGROUP with the flag ^/ADD, create a local group called ^'Awesome Users^' and add Bob to it^.
 ECHO.
-net localgroup "Awesome Users" Bob /delete
-net localgroup "Awesome Users" /delete
-net user Bob /delete
+NET USER Bob /add
+NET LOCALGROUP "Awesome Users" /add
+NET LOCALGROUP "Awesome Users" Bob /add
 ECHO.
 PAUSE
 CLS 
 
 
 ECHO.
-ECHO A20 ^- Create a task to be scheduled at 10pm every Sunday that will check the C disk for errors and write the 
-ECHO       results to a file called ^'chkdskResults^.txt^' on the desktop^.
+ECHO A19 ^- Using the NET LOCALGROUP and NET USER commands, delete the group ^'Awesome Users^' 
+ECHO and delete the user ^'Bob^'^.
 ECHO.
+NET LOCALGROUP "Awesome Users" Bob /delete
+NET LOCALGROUP "Awesome Users" /delete
+NET USER Bob /delete
+ECHO.
+PAUSE
+CLS 
 
+
+ECHO.
+ECHO A20 ^- Create a task to be scheduled at 10pm every Sunday that will check the C disk 
+ECHO for errors and write the results to a file called ^'chkdskResults^.txt^' on the desktop^.
+ECHO.
+:: How to create the file to run, C:\My Batch Script File Assignment\C drive error checker.bat from with in the .bat file>???
+SCHTASKS /create /tn "C: Error Checking" /tr "C:\My Batch Script File Assignment\C drive error checker.bat" /sc WEEKLY /mo 1 /d SUN /st 22:00 /ru System
+:: How to out put the results for the chkdsk C:\ to the txt file on the desktop
+:: How to make sure I can actually access the desktop to write the text file?  What is the path?
+SCHTASKS /query /fo LIST /v >> C:\Administrators\Desktop\chkdskResults.txt"
+chkdsk C:\
 ECHO.
 PAUSE
 CLS 
