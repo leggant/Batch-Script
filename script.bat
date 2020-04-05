@@ -74,7 +74,7 @@ CLS
 
 
 ECHO.
-ECHO A8 ^- Using the COPY command, create Back^-Up copy of the new Input Data^.txt file in the root directory^. 
+ECHO A8 ^- Using the COPY command^, create Back^-Up copy of the new Input Data^.txt file in the root directory^. 
 ECHO The new file must have the ^.bak extension^: Input Data^.bak
 COPY "C:\My Batch Script File Assignment\Input\Input Data.txt" "C:\Input Data.bak"
 ECHO.
@@ -83,7 +83,7 @@ CLS
 
 
 ECHO.
-ECHO A9 ^- Using the CD command with the ^/D flag, Go to the root of the 
+ECHO A9 ^- Using the CD command with the ^/D flag^, Go to the root of the 
 ECHO C^:^\ directory^ from any current drive^, folder or sub^-folder^.
 ECHO.
 CD /D C:\
@@ -97,8 +97,8 @@ ECHO A10 ^- Update the folder search path for batch script file execution to inc
 ECHO then display the folder search path^. Using the SET command to create the variable MYPATH then appending 
 ECHO the variable to the PATH using SET command^.
 ECHO.
-::SET MYPATH=C:\My Batch Script File Assignment\Processing
-::SET "PATH=%MYPATH%;%PATH%"
+SET MYPATH=C:\My Batch Script File Assignment\Processing
+SET "PATH=%MYPATH%;%PATH%"
 ECHO.
 PAUSE
 CLS 
@@ -153,7 +153,8 @@ ECHO A15 ^- Using the DIR command, list all text files whose names are up to sev
 ECHO long on the whole C^: drive make the listing output in wide format 
 ECHO the listing output must be appended to the end of^'Batch Script File Output Data^.txt^' using the ^/s and ^/w flags^.
 ECHO.
-DIR /s /w ???????.txt
+ECHO Please Wait While The C:\ Is Scanned.
+DIR C:\"???????".txt /s /w /o /p >> "C:\My Batch Script File Assignment\Output\Batch Script File Output Data.txt"
 ECHO.
 PAUSE
 CLS 
@@ -207,10 +208,9 @@ CLS
 ECHO.
 ECHO A20 ^- Create a task to be scheduled at 10pm every Sunday that will check the C disk 
 ECHO for errors and write the results to a file called ^'chkdskResults^.txt^' on the desktop^.
-ECHO.
-SCHTASKS /create /tn "C: Error Checking" /tr "C:\My Batch Script File Assignment\C drive error checker.bat" /sc WEEKLY /mo 1 /d SUN /st 22:00 /ru System
-SCHTASKS /query /fo LIST /v >> C:\Administrators\Desktop\chkdskResults.txt"
-chkdsk C:\
+ECHO. 
+ECHO C:\Windows\System32\chkdsk.exe ^> C:\Users\%username%\Desktop\chkdskResults.txt > C:\Users\%username%\Desktop\chkdskResults.bat
+SCHTASKS /create /TN "Drive Error Checking" /tr C:\Users\%username%\Desktop\chkdskResults.bat /sc WEEKLY /mo 1 /d SUN /st 22:00 /ru SYSTEM 
 ECHO.
 PAUSE
 CLS 
